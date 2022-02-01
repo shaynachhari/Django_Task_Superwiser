@@ -1,0 +1,29 @@
+{%extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+
+<div class="container">
+    {% for place in places %}
+
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{{place.image.url}}" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h2 class="card-title">place_name:{{place.place_name}}</h2>
+              <p class="card-text">details:{{place.details}}</p>
+              <p class="card-text">name:{{place.name}}</p>
+              {% comment %} <p class="card-text"><small class="text-muted">{{student.branch}}</small></p> {% endcomment %}
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    {% endfor %}
+</div>
+{% endblock body %}
