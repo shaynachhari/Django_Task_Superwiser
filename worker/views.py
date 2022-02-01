@@ -7,7 +7,7 @@ from worker.models import Place
 def index(request):
     if request.user.is_authenticated:
         places = Place.objects.all()
-        context = {"Places": places}
+        context = {"places": places}
         return render(request, 'index.html', context)
     return redirect('/login')
 
